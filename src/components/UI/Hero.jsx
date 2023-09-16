@@ -22,7 +22,7 @@ const Hero = () => {
                     data-aos-duration="2500"
                     className="text-headingColor font-[800] text-[1.8rem] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5"
                     >
-                        Mi nombre es Jesus Lobato <br/>Sofware Developer
+                        Mi nombre es Jesús Lobato <br/>Sofware Developer
                     </h1>
                     <div
                           data-aos="fade-right"
