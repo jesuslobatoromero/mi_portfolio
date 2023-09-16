@@ -21,7 +21,7 @@ const Footer = () => {
           <p className='text-gray-300 leading-7 mt-4 sm:mt-0'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Maecenas justo lectus, bibendum quis condimentum nec,
-            aliquam id eros.</p>
+            aliquam id eros. </p>
         </div>
 
       </div>
