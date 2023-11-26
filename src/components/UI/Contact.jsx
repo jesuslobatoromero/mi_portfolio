@@ -16,9 +16,9 @@ const Contact = () => {
             3d37.375363604484804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c1114be6291%3A0x34f018621cfe5648!
             2sSevilla!5e0!3m2!1ses!2ses!4v1694708251684!5m2!1ses!2ses" 
             className='border-0 w-full h-full'
-            allowFullscreen="" 
+            allowFullScreen="" 
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            refererpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
         <div className='w-full  mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-indigo-100 px-4 lg:px-8 py-8'>

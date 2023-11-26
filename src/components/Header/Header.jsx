@@ -1,8 +1,42 @@
-import React from 'react'
+import React, {useRef, useEffect}  from 'react'
 
 const Header = () => {
+
+    const headerRef = useRef(null)
+
+    const stickyHeaderFunc = () => {
+       window.addEventListener('scroll', ()=> {
+        if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+            headerRef.current.classList.add('sticky__header')
+        }else{
+            headerRef.current.classList.remove('sticky__header')
+        }
+       }) 
+    }
+
+    useEffect(() => {
+        stickyHeaderFunc()
+
+        return window.removeEventListener('scroll', stickyHeaderFunc)
+    },[]);
+
+    const handleClick = e=>{
+        e.preventDefault()
+
+        const targetAttr = e.target.getAttribute('href')
+        const location = document.querySelector(targetAttr).offsetTop
+
+        window.scrollTo({
+            top: location - 80,
+            left: 0,
+        });
+    };
+
   return ( 
-    <header className='w-full h-[80px] leading-[80px] flex items-center'>
+    <header 
+        ref={headerRef} 
+        className='w-full h-[80px] leading-[80px] flex items-center'
+        >
         <div className='container'>
             <div className='flex items-center justify-between'>
                 {/*-----------logo--------------*/}
@@ -20,16 +54,24 @@ const Header = () => {
                 <div className='menu'>
                     <ul className='flex items-center gap-10'>
                         <li>
-                            <a className='text-smallTextColor font-[600]' href="#about"></a>About
+                            <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#about">
+                                About
+                                </a>
                             </li>
                         <li>
-                            <a className='text-smallTextColor font-[600]' href="#services"></a>Service
+                            <a className='text-smallTextColor font-[600]' href="#service">
+                                Service
+                                </a>
                             </li>
                         <li>
-                            <a className='text-smallTextColor font-[600]' href="#porfolio"></a>Portfolio
+                            <a className='text-smallTextColor font-[600]' href="#portfolio">
+                                Portfolio
+                                </a>
                             </li>
                         <li>
-                            <a className='text-smallTextColor font-[600]' href="#contact"></a>Contact
+                            <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#contact">
+                                Contact
+                                </a>
                             </li>
                     </ul>
                 </div>

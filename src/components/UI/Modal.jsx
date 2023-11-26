@@ -1,6 +1,6 @@
 import React from 'react'
 import portfolios from '../../assets/data/portfolioData';
-import Portfolio from './portfolio';
+//import Portfolio from './portfolio';
 const Modal = ({activeID, setShowModal}) => {
 
     const porfolio = portfolios.find(porfolio => porfolio.id === activeID);
